@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Simple calories and macros calculator</string>
+    <string name="calculate">Calculate</string>
+    <string name="clear_information">Clear information</string>
+    <string name="pick_your_activity_level">Pick your activity level</string>
+    <string name="weight">Weight</string>
+    <string name="male">Male</string>
+    <string name="age">Age</string>
+    <string name="us_units">US Units</string>
+    <string name="enter_your_details">Enter your details</string>
+    <string name="female">Female</string>
+    <string name="metric_units">Metric Units</string>
+    <string name="height">Height</string>
 </resources>

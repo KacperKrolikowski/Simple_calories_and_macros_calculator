@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.SeekBar
+import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
 
 class MainActivity : AppCompatActivity() {
@@ -31,8 +32,43 @@ class MainActivity : AppCompatActivity() {
         val mAgePicker: EditText = findViewById(R.id.age_picker)
 
 
+        val mActivityInformation: TextView = findViewById(R.id.activityLevelInfo_tv)
+
         val mActivityPicker: SeekBar = findViewById(R.id.activityPicker_seekbat)
-        mActivityPicker.
+        mActivityPicker.setProgress(3, true)
+
+        mActivityPicker.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                when(progress){
+                    1 -> {
+                        mActivityInformation.text = "Mostly inactive or sedentary lifestyle"
+                    }
+                    2 -> {
+                        mActivityInformation.text = "Quite active (walking or exercising 1-2 times a week)"
+                    }
+                    3 -> {
+                        mActivityInformation.text = "Moderately active (exercising 2-3 times a week)"
+                    }
+                    4 -> {
+                        mActivityInformation.text = "Active (heavy exercise 3-4 times a week)"
+                    }
+                    5 -> {
+                        mActivityInformation.text = "Very active (heavy exercise 6 times a week)"
+                    }
+                    else -> {
+                        mActivityInformation.text = " "
+                    }
+                }
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+
+            }
+        })
 
 
         val mCalcButton = findViewById<Button>(R.id.calculate_button)
