@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
     }
 
     fun countCalories (wei: Int, hei: Int, ag: Int, se: Int) = (10*wei)+(6.25*hei)-(5*ag) + se
