@@ -21,4 +21,6 @@
     <string name="lbs">Lbs</string>
     <string name="ft">Ft</string>
     <string name="your_bmr">Your daily BMR is: </string>
+    <string name="your_calories_0">Your calories 0</string>
+    <string name="set_your_goal">Set your goal</string>
 </resources>
