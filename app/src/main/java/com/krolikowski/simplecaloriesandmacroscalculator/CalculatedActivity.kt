@@ -15,6 +15,6 @@ class CalculatedActivity : AppCompatActivity() {
         var caloriesInt: Int = calories.roundToInt()
 
         val caloriesTV: TextView = findViewById(R.id.calories_TV)
-        caloriesTV.setText(caloriesInt.toString())
+        caloriesTV.text = getString(R.string.your_bmr)+ " " + caloriesInt.toString()
     }
 }

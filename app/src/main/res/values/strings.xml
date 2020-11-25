@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Simple calories and macros calculator</string>
+    <string name="app_name">SCaMC</string>
     <string name="calculate">Calculate</string>
     <string name="clear_information">Clear information</string>
     <string name="pick_your_activity_level">Pick your activity level</string>
@@ -10,14 +10,15 @@
     <string name="metric_units">Metric Units</string>
     <string name="height">Height</string>
     <string name="activity_level_1">Mostly inactive or sedentary lifestyle</string>
-    <string name="activity_level_2">Quite active (walking or exercising 1-2 times a week)</string>
-    <string name="activity_level_3">Moderately active (exercising 2-3 times a week)</string>
-    <string name="activity_level_4">Active (heavy exercise 3-4 times a week)</string>
-    <string name="activity_level_5">Very active (heavy exercise 5-6 times a week)</string>
+    <string name="activity_level_2">Quite active (walking or exercising 1–2 times a week)</string>
+    <string name="activity_level_3">Moderately active (exercising 2–3 times a week)</string>
+    <string name="activity_level_4">Active (heavy exercise 3–4 times a week)</string>
+    <string name="activity_level_5">Very active (heavy exercise 5–6 times a week)</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="kg">Kg</string>
     <string name="cm">Cm</string>
     <string name="lbs">Lbs</string>
     <string name="ft">Ft</string>
+    <string name="your_bmr">Your daily BMR is: </string>
 </resources>

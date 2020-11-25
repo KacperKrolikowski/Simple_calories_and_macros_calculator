@@ -182,6 +182,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val mCalcButton = findViewById<Button>(R.id.calculate_button)
+        mCalcButton.setBackgroundColor(getColor(R.color.crimson_red))
         mCalcButton.setOnClickListener {
 
             if(weight == 0.0 || height == 0 || age == 0 || sex == 0){
