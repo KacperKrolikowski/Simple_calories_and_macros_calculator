@@ -191,6 +191,7 @@ class MainActivity : AppCompatActivity() {
                 val caloriesValue = countCalories(weight, height, age, sex, activityLevel)
                 val intent = Intent(applicationContext, CalculatedActivity::class.java)
                 intent.putExtra("value", caloriesValue)
+                intent.putExtra("weig", weight)
                 startActivity(intent)
             }else {
                 val caloriesValue = countCaloriesUS(weight, height, heightInch, age, sex, activityLevel)
