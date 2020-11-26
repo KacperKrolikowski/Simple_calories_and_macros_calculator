@@ -23,4 +23,5 @@
     <string name="your_bmr">Your daily BMR is: </string>
     <string name="your_calories_0">Your calories 0</string>
     <string name="set_your_goal">Set your goal</string>
+    <string name="enter_details_about_you">Enter details about you</string>
 </resources>
