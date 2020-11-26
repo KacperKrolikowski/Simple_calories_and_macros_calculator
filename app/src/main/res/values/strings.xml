@@ -24,4 +24,9 @@
     <string name="your_calories_0">Your calories 0</string>
     <string name="set_your_goal">Set your goal</string>
     <string name="enter_details_about_you">Enter details about you</string>
+    <string name="protein">Protein</string>
+    <string name="fat">Fat</string>
+    <string name="carbs">Carbs</string>
+    <string name="suggested_amounts_of_macros">Suggested amounts of macros</string>
+    <string name="set_the_rate_of_change_in_body_weight">Set the rate of change in body weight</string>
 </resources>
