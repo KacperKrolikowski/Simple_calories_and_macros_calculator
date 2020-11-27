@@ -30,4 +30,5 @@
     <string name="carbs">Węglowodany</string>
     <string name="suggested_amounts_of_macros">"Proponowany rozkład makroskładników "</string>
     <string name="set_the_rate_of_change_in_body_weight">Ustaw tempo zmiany masy ciała</string>
+    <string name="incomplete_information">Uzupełnij wszystkie swoje dane</string>
 </resources>

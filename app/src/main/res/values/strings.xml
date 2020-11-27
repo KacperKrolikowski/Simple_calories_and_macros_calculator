@@ -29,4 +29,5 @@
     <string name="carbs">Carbs</string>
     <string name="suggested_amounts_of_macros">Suggested amounts of macros</string>
     <string name="set_the_rate_of_change_in_body_weight">Set the rate of change in body weight</string>
+    <string name="incomplete_information">Complete all information</string>
 </resources>

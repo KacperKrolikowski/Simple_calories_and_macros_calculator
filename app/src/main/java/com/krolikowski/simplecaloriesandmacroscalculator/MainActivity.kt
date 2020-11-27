@@ -186,7 +186,7 @@ class MainActivity : AppCompatActivity() {
         mCalcButton.setOnClickListener {
 
             if(weight == 0.0 || height == 0 || age == 0 || sex == 0){
-                Toast.makeText(this, "Complete all information", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.incomplete_information), Toast.LENGTH_SHORT).show()
             }else if (!mUnitSwitch.isChecked) {
                 val caloriesValue = countCalories(weight, height, age, sex, activityLevel)
                 val intent = Intent(applicationContext, CalculatedActivity::class.java)
