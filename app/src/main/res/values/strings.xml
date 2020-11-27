@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SCaMC</string>
+    <string name="app_name">Simple calories and macros calculator</string>
     <string name="calculate">Calculate</string>
     <string name="clear_information">Clear information</string>
     <string name="pick_your_activity_level">Pick your activity level</string>

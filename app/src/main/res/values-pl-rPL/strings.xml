@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SCaMC</string>
+    <string name="app_name">Prosty kalkulator kalorii i makroskładników</string>
     <string name="calculate">Oblicz</string>
     <string name="clear_information">Wyczyść informacje</string>
     <string name="pick_your_activity_level">Wybierz poziom swojej aktywności</string>
