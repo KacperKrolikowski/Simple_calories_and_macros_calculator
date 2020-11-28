@@ -4,18 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.SeekBar
 import android.widget.TextView
-import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.MobileAds
 import kotlin.math.roundToInt
 
 class CalculatedActivity : AppCompatActivity() {
 
-    lateinit var mAdView: AdView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculated)
+
+        supportActionBar!!.hide()
 
         val calories: Double = intent.getDoubleExtra("value", 1500.0)
         val caloriesInt: Int = calories.roundToInt()
@@ -101,15 +100,13 @@ class CalculatedActivity : AppCompatActivity() {
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
-
             }
 
         })
 
-        MobileAds.initialize(this){}
-        mAdView = findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
+        val adView = AdView(this)
+        adView.adSize = AdSize.SMART_BANNER
+
     }
 
 
