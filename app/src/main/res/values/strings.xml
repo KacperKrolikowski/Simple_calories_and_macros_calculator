@@ -30,4 +30,14 @@
     <string name="suggested_amounts_of_macros">Suggested amounts of macros</string>
     <string name="set_the_rate_of_change_in_body_weight">Set the rate of change in body weight</string>
     <string name="incomplete_information">Complete all information</string>
+    <string name="minus_0_5">-0,5 kg/week</string>
+    <string name="minus_0_4">-0,4 kg/week</string>
+    <string name="minus_0_3">-0,3 kg/week</string>
+    <string name="minus_0_2">-0,2 kg/week</string>
+    <string name="minus_0_1">-0,1 kg/week</string>
+    <string name="plus_0_1">+0,1 kg/week</string>
+    <string name="plus_0_2">+0,2 kg/week</string>
+    <string name="plus_0_3">+0,3 kg/week</string>
+    <string name="plus_0_4">+0,4 kg/week</string>
+    <string name="plus_0_5">+0,5 kg/week</string>
 </resources>

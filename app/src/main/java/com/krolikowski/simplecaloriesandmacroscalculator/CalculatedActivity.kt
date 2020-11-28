@@ -2,7 +2,6 @@ package com.krolikowski.simplecaloriesandmacroscalculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.content.Intent
 import android.widget.SeekBar
 import android.widget.TextView
 import com.google.android.gms.ads.AdRequest
@@ -19,22 +18,22 @@ class CalculatedActivity : AppCompatActivity() {
         setContentView(R.layout.activity_calculated)
 
         val calories: Double = intent.getDoubleExtra("value", 1500.0)
-        var caloriesInt: Int = calories.roundToInt()
+        val caloriesInt: Int = calories.roundToInt()
 
         val weight: Double = intent.getDoubleExtra("weig", 60.0)
-        var weightInt: Int = weight.roundToInt()
+        val weightInt: Int = weight.roundToInt()
 
         val caloriesTV: TextView = findViewById(R.id.calories_TV)
-        caloriesTV.text = getString(R.string.your_bmr)+ " " + caloriesInt.toString()
+        (getString(R.string.your_bmr)+ " " + caloriesInt.toString()).also { caloriesTV.text = it }
 
-        var mGoalSet: Int = 0
+        var mGoalSet = 0
 
         val mProteinAmount: TextView = findViewById(R.id.protein_amount_tv)
         val mFatAmount: TextView = findViewById(R.id.fat_amount_tv)
         val mCarbsAmount: TextView = findViewById(R.id.carbs_amount_tv)
-        mProteinAmount.text = amountOfProtein(weightInt).toString() + "g"
-        mFatAmount.text = amountOfFats(caloriesInt).roundToInt().toString() + "g"
-        mCarbsAmount.text = amountOfCarbs(caloriesInt, weightInt).roundToInt().toString() + "g"
+        (amountOfProtein(weightInt).toString() + "g").also { mProteinAmount.text = it }
+        (amountOfFats(caloriesInt).roundToInt().toString() + "g").also { mFatAmount.text = it }
+        (amountOfCarbs(caloriesInt, weightInt).roundToInt().toString() + "g").also { mCarbsAmount.text = it }
 
         val mAfterCaloriesChange: TextView = findViewById(R.id.calories_after_change_tv)
         mAfterCaloriesChange.text = caloriesInt.toString()
@@ -47,23 +46,23 @@ class CalculatedActivity : AppCompatActivity() {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 when(progress){
                     1 -> {
-                        mGoalInfoTV.text = "-0,5 kg/week"
+                        mGoalInfoTV.text = getString(R.string.minus_0_5)
                         mGoalSet = -500
                     }
                     2 -> {
-                        mGoalInfoTV.text = "-0,4 kg/week"
+                        mGoalInfoTV.text = getString(R.string.minus_0_4)
                         mGoalSet = -400
                     }
                     3 -> {
-                        mGoalInfoTV.text = "-0,3 kg/week"
+                        mGoalInfoTV.text = getString(R.string.minus_0_3)
                         mGoalSet = -300
                     }
                     4 -> {
-                        mGoalInfoTV.text = "-0,2 kg/week"
+                        mGoalInfoTV.text = getString(R.string.minus_0_2)
                         mGoalSet = -200
                     }
                     5 -> {
-                        mGoalInfoTV.text = "-0,1 kg/week"
+                        mGoalInfoTV.text = getString(R.string.minus_0_1)
                         mGoalSet = -100
                     }
                     6 -> {
@@ -71,30 +70,30 @@ class CalculatedActivity : AppCompatActivity() {
                         mGoalSet = 0
                     }
                     7 -> {
-                        mGoalInfoTV.text = "+0,1 kg/week"
+                        mGoalInfoTV.text = getString(R.string.plus_0_1)
                         mGoalSet = 100
                     }
                     8 -> {
-                        mGoalInfoTV.text = "+0,2 kg/week"
+                        mGoalInfoTV.text = getString(R.string.plus_0_2)
                         mGoalSet = 200
                     }
                     9 -> {
-                        mGoalInfoTV.text = "+0,3 kg/week"
+                        mGoalInfoTV.text = getString(R.string.plus_0_3)
                         mGoalSet = 300
                     }
                     10 -> {
-                        mGoalInfoTV.text = "+0,4 kg/week"
+                        mGoalInfoTV.text = getString(R.string.plus_0_4)
                         mGoalSet = 400
                     }
                     11 -> {
-                        mGoalInfoTV.text = "+0,5 kg/week"
+                        mGoalInfoTV.text = getString(R.string.plus_0_5)
                         mGoalSet = 500
                     }
                 }
                 mAfterCaloriesChange.text = (caloriesInt+mGoalSet).toString()
-                mProteinAmount.text = amountOfProtein(weightInt).toString() + "g"
-                mFatAmount.text = amountOfFats(caloriesInt+mGoalSet).roundToInt().toString() + "g"
-                mCarbsAmount.text = amountOfCarbs(caloriesInt+mGoalSet, weightInt).roundToInt().toString() + "g"
+                (amountOfProtein(weightInt).toString() + "g").also { mProteinAmount.text = it }
+                (amountOfFats(caloriesInt+mGoalSet).roundToInt().toString() + "g").also { mFatAmount.text = it }
+                (amountOfCarbs(caloriesInt+mGoalSet, weightInt).roundToInt().toString() + "g").also { mCarbsAmount.text = it }
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
